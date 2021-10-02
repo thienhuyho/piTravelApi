@@ -7,9 +7,12 @@ import { MongooseModule } from '@nestjs/mongoose';
 @Module({
   imports: [
     HotelsModule,
-    MongooseModule.forRoot('mongodb://localhost:27017/piTravel', {
-      autoCreate: true,
-    }),
+    MongooseModule.forRoot(
+      'mongodb+srv://truvihiu:4q1VDSdvtHieKc2Y@cluster0.o4xdw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+      {
+        autoCreate: true,
+      },
+    ),
   ],
   controllers: [AppController],
   providers: [AppService],
